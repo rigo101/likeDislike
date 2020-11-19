@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes Dislikes</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li{
+            width: 400px;
+            padding: 15px;
+            background-color: #f2f2f2;
+        }
+        .flex-container {
+            display: flex;
+        }
+        span, button {
+            display: inline-block;
+            width: 100px;
+            margin-right: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul id="posts-container">
+        <li>
+            <p>11/03/2020 • Hurray, I got a coding job!</p>
+            <div class="flex-container">
+                <span id='likes-container'>0</span> 
+                <span id='dislikes-container'>0</span>
+            </div>
+            <div class="flex-container">
+                <button id='like-button'>Like</button>
+                <button id='dislike-button'>Dislike</button>
+            </div>
+        </li>
+    </ul>
+    <script>
+        const likesContainer = document.getElementById('likes-container');
+        const dislikesContainer = document.getElementById('dislikes-container');
+        const likeButton = document.getElementById('like-button');
+        const dislikeButton = document.getElementById('dislike-button');
+
+        let numberOfLikes = 0;
+        let numberOfDislikes = 0;
+
+        const updateHTMLLikes = () => likesContainer.innerHTML = numberOfLikes;
+        const updateHTMLDislikes = () => dislikesContainer.innerHTML = numberOfDislikes;
+
+        const handleLike = () => {
+            numberOfLikes++;
+            updateHTMLLikes();
+        }
+
+        const handleDislike = () => {
+            numberOfDislikes++;
+            updateHTMLDislikes();
+        }
+
+        likeButton.addEventListener('click', handleLike);
+        dislikeButton.addEventListener('click', handleDislike);
+    </script>
+</body>
+</html>
