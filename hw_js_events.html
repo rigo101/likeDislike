@@ -14,9 +14,6 @@
             padding: 15px;
             background-color: #f2f2f2;
         }
-        .flex-container {
-            display: flex;
-        }
         span, button {
             display: inline-block;
             width: 100px;
@@ -29,14 +26,10 @@
     <ul id="posts-container">
         <li>
             <p>11/03/2020 • Hurray, I got a coding job!</p>
-            <div class="flex-container">
-                <span id='likes-container'>0</span> 
-                <span id='dislikes-container'>0</span>
-            </div>
-            <div class="flex-container">
-                <button id='like-button'>Like</button>
-                <button id='dislike-button'>Dislike</button>
-            </div>
+            <span id='likes-container'>0</span> 
+            <span id='dislikes-container'>0</span>
+            <button id='like-button'>Like</button>
+            <button id='dislike-button'>Dislike</button>
         </li>
     </ul>
     <script>
